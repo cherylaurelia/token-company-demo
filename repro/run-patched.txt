@@ -1,0 +1,23 @@
+    log: TTC compression failed (Invalid or inactive API key); sending uncompressed.
+    log: TTC compression failed (Invalid or inactive API key); sending uncompressed.
+    log: TTC compression failed (API error (503): Service Unavailable); sending uncompressed.
+    log: TTC compression failed (API error (503): Service Unavailable); sending uncompressed.
+    log: TTC compression failed ([Errno 61] Connection refused); sending uncompressed.
+    log: TTC compression failed ([Errno 61] Connection refused); sending uncompressed.
+the-token-company 0.4.1
+
+== real API, invalid key (401)
+  openai    OK    -> 'stub answer'
+  anthropic OK    -> 'stub answer'
+
+== TTC 503 (outage)
+  openai    OK    -> 'stub answer'
+  anthropic OK    -> 'stub answer'
+
+== TTC unreachable
+  openai    OK    -> 'stub answer'
+  anthropic OK    -> 'stub answer'
+
+LLM requests that reached the stub: {'openai': 3, 'anthropic': 3}
+    log: TTC compression failed (Invalid or inactive API key); sending uncompressed.
+  async openai OK    -> 'stub answer'

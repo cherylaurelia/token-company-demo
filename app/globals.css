@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Colors and fonts from thetokencompany.com: black background, white pill buttons, dark gray pills, Inter + Geist Mono */
+@theme {
+  --color-bg: #000000;
+  --color-panel: #0a0c10;
+  --color-line: #262a31;
+  --color-text: #f1f4f9;
+  --color-soft: #dbe4f6;
+  --color-muted: #a3aab6;
+  --color-pill: #1c1f24;
+  --color-good: #4ade80;
+  --color-bad: #ff7b72;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-soft);
+  outline-offset: 3px;
+}

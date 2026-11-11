@@ -1,0 +1,19 @@
+    log: TTC compression failed (Invalid or inactive API key); sending uncompressed.
+    log: TTC compression failed (API error (503): Service Unavailable); sending uncompressed.
+    log: TTC compression failed ([Errno 61] Connection refused); sending uncompressed.
+the-token-company 0.4.1
+
+== real API, invalid key (401)
+  openai    RAISED thetokencompany._exceptions.AuthenticationError: Invalid or inactive API key
+  anthropic OK    -> 'stub answer'
+
+== TTC 503 (outage)
+  openai    RAISED thetokencompany._exceptions.APIError: API error (503): Service Unavailable
+  anthropic OK    -> 'stub answer'
+
+== TTC unreachable
+  openai    RAISED httpx.ConnectError: [Errno 61] Connection refused
+  anthropic OK    -> 'stub answer'
+
+LLM requests that reached the stub: {'openai': 0, 'anthropic': 3}
+async, PyPI 0.5.1: AuthenticationError: Invalid or inactive API key (call never sent)
